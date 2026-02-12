@@ -84,7 +84,15 @@ h1 {
     font-weight: 800;
 }
 
+.img {
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
+    border-width: 2px;
+    border-color: white;
+    object-fit: cover;
 
+}
 
 
 
