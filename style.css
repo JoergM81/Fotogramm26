@@ -4,12 +4,20 @@
     src: url('./fonts/Figtree-VariableFont_wght.ttf') format('woff2'),
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 h1 {
     color: white;
     font-size: clamp(1.5rem, 5vw, 5rem);
     margin: 0;
     font-weight: 800;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 button {
@@ -36,6 +44,22 @@ button {
     height: 100%;
     object-fit: cover;                      /* Zuschneiden ohne Verzerren */
     display: block;                         /* Verhindert kleine Lücken */
+}
+
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.img-btn:hover {
+    border-color: #7bf057;
+}
+
+.img-btn:hover img {
+    transform: scale(1.15); /* Optional: Bild leicht vergrößern */
 }
 
 body {
@@ -92,7 +116,7 @@ footer {
 
 .wrapper {
     /* Die maximale Breite, ab der der Inhalt nicht weiter wächst */
-    max-width: 1200px;
+    max-width: 1440px;
 
     /* Zentriert den Container horizontal */
     margin-left: auto;
