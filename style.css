@@ -8,7 +8,23 @@ body {
     min-height: 100vh;
     }
 
+header {
+    background-color: #09212A;
+    color: #fff;
+    text-align: center;
+    padding: 64px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header_logo {
+    width: 350px;
+    padding: 16px;
+}   
+
 main {
+     background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +35,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: #09212A;
     color: #fff;
     text-align: center;
     padding: 64px;
@@ -30,7 +46,7 @@ footer {
 
 .footer_logo {
     width: 350px;
-    padding: 32px;
+    padding: 16px;
 }   
 
 .wrapper {
