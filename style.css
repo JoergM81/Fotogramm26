@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'figtree'; /* Ein frei wählbarer Name */
+    src: url('./fonts/Figtree-VariableFont_wght.ttf') format('woff2'),
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'figtree', Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -72,6 +77,12 @@ footer {
     width: 100%;
 }
 
+h1 {
+    color: white;
+    font-size: 67px;
+    margin: 0;
+    font-weight: 800;
+}
 
 
 
