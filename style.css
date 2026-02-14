@@ -25,6 +25,14 @@ dialog {
     background-color: #09212A;
     border-radius: 60px;
     color: #fff;
+    /* width: 688px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 56px;
+    padding-bottom: 56px;
 }
 
 button {
