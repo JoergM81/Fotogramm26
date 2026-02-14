@@ -21,10 +21,25 @@ h1 {
     margin-top: 46px;
 }
 
+dialog {
+    background-color: #09212A;
+    border-radius: 60px;
+    color: #fff;
+}
+
 button {
     padding: 0;
     border: none;
     background: none;
+}
+
+.dialogBtn {
+    background-color: #09212A;
+    padding: 16px;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 16px;
+
 }
 
 .img-btn {
@@ -49,7 +64,7 @@ button {
 
 .album {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     gap: 20px;
     justify-content: center;
     width: 100%;
