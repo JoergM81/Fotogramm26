@@ -85,6 +85,7 @@ header {
 .header_logo {
     width: 350px;
     padding: 16px;
+    width: clamp(150px, 25vw, 350px);
 }
 
 main {
@@ -110,8 +111,9 @@ footer {
 }
 
 .footer_logo {
-    width: 350px;
-    padding: 16px;
+        width: 350px;
+            padding: 16px;
+            width: clamp(150px, 25vw, 350px);
 }
 
 .wrapper {

@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram26</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>  
+
 </head>
+
 <body>
 
     <header>
         <div class="wrapper footer_test">
-        <img class="header_logo" src="img/Dev_Logo_Marchner_Pfade_weiß.png" alt="Logo Dev Marchner">
-   </div>
+            <img class="header_logo" src="img/Dev_Logo_Marchner_Pfade_weiß.png" alt="Logo Dev Marchner">
+        </div>
     </header>
 
 
     <main>
-        <section class = "wrapper">
-        <h1>your personal photo album</h1>
 
-        <div class="album">
-            <button class="img-btn"><img src="img/20250619_102832.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/20250619_103100.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/20250808_154459.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/20250808_155226.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/20250903_102839.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/20250915_192143.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/20251008_062934.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/20251123_141955.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/dji_fly_20250611_200820_119_1749665349323_photo_optimized.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/dji_fly_20250613_193544_151_1749836154678_photo_optimized.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/dji_fly_20250613_193906_159_1749836358344_photo_optimized.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-            <button class="img-btn"><img src="img/DSC00154.jpg" alt="Bild Felsen, abstrakt fotografiert"></button>
-        </div>
+
+        <dialog id="imageDialog">
+
+            <div>
+                <h2 id="dialogTitle">Bildname</h2>
+            </div>
+
+            <img id="dialogImage" src="" alt="Bild1">
+
+            <div>
+                <button type="button" aria-label="dialog schließen" onclick="closeDialog()">schießen</button>
+            </div>
+
+        </dialog>
+
+        <section class="wrapper">
+            <h1>your personal photo album</h1>
+
+            <div class="album">
+
+                <button type="button" class="img-btn" onclick="openDialog('img/20250619_102832.jpg', 'Bild Felsen')">
+                    <img src="img/20250619_102832.jpg" alt="Bild Felsen">
+                </button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/20250619_103100.jpg', 'Partnachklamm')">
+                    <img src="img/20250619_103100.jpg" alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/20250808_154459.jpg', 'Uhu')">
+                    <img src="img/20250808_154459.jpg" alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/20250808_155226.jpg', 'Uhu')">
+                    <img src="img/20250808_155226.jpg" alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/20250903_102839.jpg', 'Schlange')">
+                    <img src="img/20250903_102839.jpg" alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/20250915_192143.jpg', 'Sonnenuntergang mit Gewitterwolken')">
+                    <img src="img/20250915_192143.jpg" alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/20251008_062934.jpg', 'Mond mit Woklen')">
+                    <img src="img/20251008_062934.jpg" alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/20251123_141955.jpg', 'Eiszauber Winter')">
+                    <img src="img/20251123_141955.jpg" alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/dji_fly_20250611_200820_119_1749665349323_photo_optimized.jpg', 'Luftaufnahme Meer und Strand')">
+                    <img src="img/dji_fly_20250611_200820_119_1749665349323_photo_optimized.jpg"
+                        alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/dji_fly_20250613_193544_151_1749836154678_photo_optimized.jpg', 'Luftaufnahme über dem Wasser mit Blick auf den Strand')">
+                    <img src="img/dji_fly_20250613_193544_151_1749836154678_photo_optimized.jpg"
+                        alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/dji_fly_20250613_193906_159_1749836358344_photo_optimized.jpg', 'Luftaufnahme Meer')">
+                    <img src="img/dji_fly_20250613_193906_159_1749836358344_photo_optimized.jpg"
+                        alt=""></button>
+
+                <button type="button" class="img-btn" onclick="openDialog('img/DSC00154.jpg', 'Kanal in Venedig')">
+                    <img src="img/DSC00154.jpg" alt=""></button>
+            </div>
+
+
+
+        </section>
     </main>
-</section>
+
     <footer>
-       <div class = "wrapper footer_test">
-        <div><img class="footer_logo" src="./img/Dev_Logo_Marchner_Pfade_weiß.png" alt="Logo_Dev_Marchner"></div>
-        <div><p>&copy; 2026 Fotogram26. Alle Rechte vorbehalten.</p></div> 
-         </div> 
+        <div class="wrapper footer_test">
+            <div><img class="footer_logo" src="./img/Dev_Logo_Marchner_Pfade_weiß.png" alt="Logo_Dev_Marchner"></div>
+            <div>
+                <p>&copy; 2026 Fotogram26. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
     </footer>
+
+
+
+    <script src="script.js" defer></script>
 </body>
+
 </html>
