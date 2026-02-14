@@ -35,6 +35,19 @@ dialog {
     padding-bottom: 56px;
 }
 
+.dialogButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.dialogHead {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
 button {
     padding: 0;
     border: none;
@@ -47,6 +60,7 @@ button {
     color: #fff;
     border-radius: 10px;
     margin-top: 16px;
+    cursor: pointer;
 
 }
 
@@ -68,6 +82,7 @@ button {
     height: 100%;
     object-fit: cover;                      /* Zuschneiden ohne Verzerren */
     display: block;                         /* Verhindert kleine Lücken */
+    cursor: pointer;
 }
 
 .album {
@@ -78,11 +93,13 @@ button {
     width: 100%;
 }
 
-.img-btn:hover {
+/* .img-btn:hover {
     border-color: #7bf057;
-}
+} */
 
 .img-btn:hover img {
+    transition: 1s;
+    filter: grayscale(100%);
     transform: scale(1.15); /* Optional: Bild leicht vergrößern */
 }
 
