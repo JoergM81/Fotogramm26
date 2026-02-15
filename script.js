@@ -47,7 +47,7 @@ window.go_right = function(){
 }
 
 window.go_left = function(){
-    currentIndex--;
+    Index--;
     if(Index < 0){
         Index = images.length - 1; // zum letzten Bild
     }
