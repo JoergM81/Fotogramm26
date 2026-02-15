@@ -21,29 +21,36 @@
     <main>
 
 
-        <dialog id="imageDialog">
+        <dialog id="imageDialog" onclick="outsideClick(event)">
 
-            <div class="dialogHead">
-                <div>
-                    <h2 id="dialogTitle">Bildname</h2>
+            <div class="dialogContent" onclick="event.stopPropagation()">
+
+                <div class="dialogHead">
+                    <div>
+                        <h2 id="dialogTitle">Bildname</h2>
+                    </div>
+                    <div>
+                        <button type="button" class="dialogBtn" aria-label="dialog schließen"
+                            onclick="closeDialog()"><img src="./img/close.png" alt=""></button>
+                    </div>
                 </div>
-                <div>
-                    <button type="button" class="dialogBtn" aria-label="dialog schließen"
-                        onclick="closeDialog()"><img src="./img/close.png" alt=""></button>
+
+                <img id="dialogImage" src="" alt="Bild1">
+
+                <div class='dialogButtons'>
+                    <div>
+                        <button type="button" class="dialogBtn" onclick="go_left()"><img src="./img/Button_left.png"
+                                alt=""></button>
+                    </div>
+
+                     <span id="dialogCounter">1/12</span>
+
+                    <div>
+                        <button type="button" class="dialogBtn" onclick="go_right()"><img src="./img/Button_right.png"
+                                alt=""></button>
+                    </div>
                 </div>
             </div>
-
-            <img id="dialogImage" src="" alt="Bild1">
-
-            <div class='dialogButtons'>
-                <div>
-                    <button type="button" class="dialogBtn" onclick="go_left()"><img src="./img/Button_left.png" alt=""></button>
-                </div>
-                <div>
-                    <button type="button" class="dialogBtn" onclick="go_right()"><img src="./img/Button_right.png" alt=""></button>
-                </div>
-            </div>
-
 
         </dialog>
 
@@ -52,41 +59,49 @@
 
             <div class="album">
 
-                <button id="1" type="button" class="img-btn" onclick="openDialog(1, 'img/20250619_102832.jpg', 'Bild Felsen')">
+                <button id="1" type="button" class="img-btn"
+                    onclick="openDialog(1)">
                     <img src="img/20250619_102832.jpg" alt="Bild Felsen">
                 </button>
 
-                <button type="button" class="img-btn" onclick="openDialog(2, 'img/20250619_103100.jpg', 'Partnachklamm')">
+                <button type="button" class="img-btn"
+                    onclick="openDialog(2)">
                     <img src="img/20250619_103100.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(3, 'img/20250808_154459.jpg', 'Uhu')">
+                <button type="button" class="img-btn" onclick="openDialog(3)">
                     <img src="img/20250808_154459.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(4, 'img/20250808_155226.jpg', 'Uhu')">
+                <button type="button" class="img-btn" onclick="openDialog(4)">
                     <img src="img/20250808_155226.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(5, 'img/20250903_102839.jpg', 'Schlange')">
+                <button type="button" class="img-btn" onclick="openDialog(5)">
                     <img src="img/20250903_102839.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(6, 'img/20250915_192143.jpg', 'Sonnenuntergang mit Gewitterwolken')">
+                <button type="button" class="img-btn"
+                    onclick="openDialog(6)">
                     <img src="img/20250915_192143.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(7, 'img/20251008_062934.jpg', 'Mond mit Woklen')">
+                <button type="button" class="img-btn"
+                    onclick="openDialog(7)">
                     <img src="img/20251008_062934.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(8, 'img/20251123_141955.jpg', 'Eiszauber Winter')">
+                <button type="button" class="img-btn"
+                    onclick="openDialog(8)">
                     <img src="img/20251123_141955.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(9, 'img/dji_fly_20250611_200820_119_1749665349323_photo_optimized.jpg', 'Luftaufnahme Meer und Strand')">
+                <button type="button" class="img-btn"
+                    onclick="openDialog(9)">
                     <img src="img/dji_fly_20250611_200820_119_1749665349323_photo_optimized.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(10, 'img/dji_fly_20250613_193544_151_1749836154678_photo_optimized.jpg', 'Luftaufnahme über dem Wasser mit Blick auf den Strand')">
+                <button type="button" class="img-btn"
+                    onclick="openDialog(10)">
                     <img src="img/dji_fly_20250613_193544_151_1749836154678_photo_optimized.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(11, 'img/dji_fly_20250613_193906_159_1749836358344_photo_optimized.jpg', 'Luftaufnahme Meer')">
+                <button type="button" class="img-btn"
+                    onclick="openDialog(11)">
                     <img src="img/dji_fly_20250613_193906_159_1749836358344_photo_optimized.jpg" alt=""></button>
 
-                <button type="button" class="img-btn" onclick="openDialog(12, 'img/DSC00154.jpg', 'Kanal in Venedig')">
+                <button type="button" class="img-btn" onclick="openDialog(12)">
                     <img src="img/DSC00154.jpg" alt=""></button>
             </div>
 
