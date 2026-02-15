@@ -19,23 +19,30 @@ h1 {
     font-weight: 800;
     margin-bottom: 80px;
     margin-top: 46px;
+    text-align: center;
 }
 
 dialog {
     background-color: #09212A;
     border-radius: 60px;
     color: #fff;
-    /* width: 688px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column; */
+    width: 688 px;
+    height: 674 px;
     padding-left: 64px;
     padding-right: 64px;
     padding-top: 56px;
     padding-bottom: 56px;
 }
 
-.dialogButtons{
+#dialogImages {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.dialogButtons {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -69,10 +76,14 @@ button {
     border: none;
     background: none;
     width: clamp(150px, 25vw, 250px);
-    aspect-ratio: 1 / 1;                 /* Immer quadratisch */
-    display: inline-block;              /* Sicherstellen, dass aspect-ratio funktioniert */
-    overflow: hidden;                   /* Verhindert, dass Bild übersteht */
-    border-radius: 16px;                /* Abgerundete Ecken */
+    aspect-ratio: 1 / 1;
+    /* Immer quadratisch */
+    display: inline-block;
+    /* Sicherstellen, dass aspect-ratio funktioniert */
+    overflow: hidden;
+    /* Verhindert, dass Bild übersteht */
+    border-radius: 16px;
+    /* Abgerundete Ecken */
     border: 2px solid white;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -80,14 +91,16 @@ button {
 .img-btn img {
     width: 100%;
     height: 100%;
-    object-fit: cover;                      /* Zuschneiden ohne Verzerren */
-    display: block;                         /* Verhindert kleine Lücken */
+    object-fit: cover;
+    /* Zuschneiden ohne Verzerren */
+    display: block;
+    /* Verhindert kleine Lücken */
     cursor: pointer;
 }
 
 .album {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     width: 100%;
@@ -100,7 +113,8 @@ button {
 .img-btn:hover img {
     transition: 1s;
     filter: grayscale(100%);
-    transform: scale(1.15); /* Optional: Bild leicht vergrößern */
+    transform: scale(1.15);
+    /* Optional: Bild leicht vergrößern */
 }
 
 body {
@@ -152,9 +166,9 @@ footer {
 }
 
 .footer_logo {
-        width: 350px;
-            padding: 16px;
-            width: clamp(150px, 25vw, 350px);
+    width: 350px;
+    padding: 16px;
+    width: clamp(150px, 25vw, 350px);
 }
 
 .wrapper {
@@ -181,4 +195,45 @@ footer {
 }
 
 
+@media (max-width: 1092px) {
+    dialog {
+        width: 600px;
+        padding: 24px;
+        border-radius: 32px;
+    }
 
+    #dialogImage {
+        width: 99%;
+    }
+}
+
+@media (max-width: 700px) {
+    dialog {
+        width: 500px;
+        padding: 24px;
+        border-radius: 32px;
+    }
+
+    #dialogImage {
+        width: 99%;
+    }
+}
+
+@media (max-width: 600px) {
+    dialog {
+        width: 240px;
+        padding: 24px;
+        border-radius: 32px;
+    }
+
+    #dialogImage {
+        width: 99%;
+    }
+
+    .footer_test {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+}
