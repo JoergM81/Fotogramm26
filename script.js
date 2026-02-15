@@ -22,43 +22,58 @@ const dialogTitle = document.getElementById("dialogTitle");
 const dialogCounter = document.getElementById("dialogCounter");
 
 
-window.openDialog = function(i){
+window.openDialog = function (i) {
     Index = i - 1; // weil dein erstes Bild 1 ist
     updateDialog();
     dialog.showModal();
 }
 
-window.closeDialog = function(){
+window.closeDialog = function () {
     dialog.close();
 }
 
-function updateDialog(){
+function updateDialog() {
     dialogImage.src = images[Index].src;
     dialogTitle.textContent = images[Index].title;
     dialogCounter.textContent = `${Index + 1}/${images.length}`;
 }
 
-window.go_right = function(){
+window.go_right = function () {
     Index++;
-    if(Index >= images.length){
+    if (Index >= images.length) {
         Index = 0; // wieder zum Anfang
     }
+
     updateDialog();
 }
 
-window.go_left = function(){
+window.go_left = function () {
     Index--;
-    if(Index < 0){
+    if (Index < 0) {
         Index = images.length - 1; // zum letzten Bild
     }
     updateDialog();
 }
 
-window.outsideClick = function(event) {
+window.outsideClick = function (event) {
     if (event.target.id === "imageDialog") {
-        event.target.close();
+        dialog.close();
     }
 }
-window.outsideClick = function() {
+window.outsideClick = function () {
     dialog.close();
 }
+
+
+document.onkeydown = function (event) {
+    if (!dialog.open) return;
+
+    if (event.key === "ArrowRight") {
+        go_right();
+    } else if (event.key === "ArrowLeft") {
+        go_left();
+    } else if (event.key === "Escape"){
+        closeDialog();
+    }
+}
+

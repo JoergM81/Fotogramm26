@@ -1,3 +1,6 @@
+
+    /* Fonts */
+
 @font-face {
     font-family: 'figtree';
     /* Ein frei wählbarer Name */
@@ -21,6 +24,10 @@ h1 {
     margin-top: 46px;
     text-align: center;
 }
+
+
+/* Dialog */
+
 
 dialog {
     background-color: #09212A;
@@ -68,8 +75,12 @@ button {
     border-radius: 10px;
     margin-top: 16px;
     cursor: pointer;
-
 }
+
+/* Dialog end */
+
+
+/* Images und Album */
 
 .img-btn {
     padding: 0;
@@ -106,9 +117,6 @@ button {
     width: 100%;
 }
 
-/* .img-btn:hover {
-    border-color: #7bf057;
-} */
 
 .img-btn:hover img {
     transition: 1s;
@@ -116,6 +124,8 @@ button {
     transform: scale(1.15);
     /* Optional: Bild leicht vergrößern */
 }
+
+/* Images und Album end */
 
 body {
     font-family: 'figtree', Arial, sans-serif;
@@ -126,6 +136,10 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+
+
+/* Header */
 
 header {
     background-color: #09212A;
@@ -143,6 +157,8 @@ header {
     width: clamp(150px, 25vw, 350px);
 }
 
+/* Header end */
+
 main {
     background-color: black;
     display: flex;
@@ -153,6 +169,9 @@ main {
     padding: 20px;
     flex: 1;
 }
+
+
+/* Footer */
 
 footer {
     background-color: #09212A;
@@ -193,6 +212,9 @@ footer {
     align-items: center;
     width: 100%;
 }
+
+
+/* Footer end */
 
 
 @media (max-width: 1092px) {
