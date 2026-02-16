@@ -22,14 +22,21 @@ const dialogTitle = document.getElementById("dialogTitle");
 const dialogCounter = document.getElementById("dialogCounter");
 
 
-window.openDialog = function (i) {
+function openDialog(i) {
+    clearDialog(); 
     Index = i - 1; // weil dein erstes Bild 1 ist
     updateDialog();
     dialog.showModal();
 }
 
-window.closeDialog = function () {
+function closeDialog() {
     dialog.close();
+}
+
+function clearDialog() {
+    dialogImage.src = "";
+    dialogTitle.textContent = "";
+    dialogCounter.textContent = "";
 }
 
 function updateDialog() {
@@ -38,7 +45,7 @@ function updateDialog() {
     dialogCounter.textContent = `${Index + 1}/${images.length}`;
 }
 
-window.go_right = function () {
+function go_right() {
     Index++;
     if (Index >= images.length) {
         Index = 0; // wieder zum Anfang
@@ -47,7 +54,7 @@ window.go_right = function () {
     updateDialog();
 }
 
-window.go_left = function () {
+function go_left() {
     Index--;
     if (Index < 0) {
         Index = images.length - 1; // zum letzten Bild
@@ -55,12 +62,12 @@ window.go_left = function () {
     updateDialog();
 }
 
-window.outsideClick = function (event) {
+function outsideClick(event) {
     if (event.target.id === "imageDialog") {
         dialog.close();
     }
 }
-window.outsideClick = function () {
+function outsideClick() {
     dialog.close();
 }
 
