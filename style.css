@@ -145,7 +145,7 @@ header {
     background-color: #09212A;
     color: #fff;
     text-align: center;
-    padding: 64px;
+    padding: 32px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -176,7 +176,7 @@ footer {
     background-color: #09212A;
     color: #fff;
     text-align: center;
-    padding: 64px;
+    padding: 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
