@@ -33,15 +33,15 @@ dialog {
     background-color: #09212A;
     border-radius: 60px;
     color: #fff;
-    width: 688 px;
-    height: 674 px;
-    padding-left: 64px;
+    /* width: 500px;
+    height: auto; */
+    /* padding-left: 64px;
     padding-right: 64px;
     padding-top: 56px;
-    padding-bottom: 56px;
+    padding-bottom: 56px; */
 }
 
-#dialogImages {
+#dialogImage {
     width: 100%;
     height: auto;
     max-height: 400px;
@@ -86,7 +86,7 @@ button {
     padding: 0;
     border: none;
     background: none;
-    width: clamp(150px, 25vw, 230px);
+    width: clamp(150px, 25vw, 250px);
     aspect-ratio: 1 / 1;
     /* Immer quadratisch */
     display: inline-block;
@@ -165,6 +165,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* min-height: 80vh; */
     padding: 20px;
     flex: 1;
 }
@@ -216,7 +217,7 @@ footer {
 /* Footer end */
 
 
-@media (max-width: 1092px) {
+/* @media (max-width: 1092px) {
     dialog {
         width: 600px;
         padding: 24px;
@@ -238,10 +239,10 @@ footer {
     #dialogImage {
         width: 99%;
     }
-}
+} */
 
 @media (max-width: 600px) {
-    dialog {
+    /* dialog {
         width: 240px;
         padding: 24px;
         border-radius: 32px;
@@ -249,7 +250,7 @@ footer {
 
     #dialogImage {
         width: 99%;
-    }
+    } */
 
     .footer_test {
         align-items: center;
