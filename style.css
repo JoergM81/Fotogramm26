@@ -3,7 +3,6 @@
 
 @font-face {
     font-family: 'figtree';
-    /* Ein frei wählbarer Name */
     src: url('./fonts/Figtree-VariableFont_wght.ttf') format('woff2'),
 }
 
@@ -33,12 +32,7 @@ dialog {
     background-color: #09212A;
     border-radius: 60px;
     color: #fff;
-    /* width: 500px;
-    height: auto; */
-    /* padding-left: 64px;
-    padding-right: 64px;
-    padding-top: 56px;
-    padding-bottom: 56px; */
+    width: 300px;
 }
 
 #dialogImage {
@@ -80,7 +74,7 @@ button {
 /* Dialog end */
 
 
-/* Images und Album */
+/* Images and Album */
 
 .img-btn {
     padding: 0;
@@ -88,13 +82,9 @@ button {
     background: none;
     width: clamp(150px, 25vw, 250px);
     aspect-ratio: 1 / 1;
-    /* Immer quadratisch */
     display: inline-block;
-    /* Sicherstellen, dass aspect-ratio funktioniert */
     overflow: hidden;
-    /* Verhindert, dass Bild übersteht */
     border-radius: 16px;
-    /* Abgerundete Ecken */
     border: 2px solid white;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -103,9 +93,7 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Zuschneiden ohne Verzerren */
     display: block;
-    /* Verhindert kleine Lücken */
     cursor: pointer;
 }
 
@@ -122,10 +110,9 @@ button {
     transition: 1s;
     filter: grayscale(100%);
     transform: scale(1.15);
-    /* Optional: Bild leicht vergrößern */
 }
 
-/* Images und Album end */
+/* Images and Album end */
 
 body {
     font-family: 'figtree', Arial, sans-serif;
@@ -165,7 +152,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* min-height: 80vh; */
     padding: 20px;
     flex: 1;
 }
@@ -181,7 +167,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border-radius: 100% 100% 0 0 / 80px; */
 }
 
 .footer_logo {
@@ -191,18 +176,11 @@ footer {
 }
 
 .wrapper {
-    /* Die maximale Breite, ab der der Inhalt nicht weiter wächst */
     max-width: 1440px;
-
-    /* Zentriert den Container horizontal */
     margin-left: auto;
     margin-right: auto;
-
-    /* Verhindert, dass der Inhalt auf Handys an den Rand klatscht */
     padding-left: 20px;
     padding-right: 20px;
-
-    /* Sorgt dafür, dass padding nicht die Breite beeinflusst (wichtig!) */
     box-sizing: border-box;
 }
 

@@ -6,12 +6,7 @@ let images = [
     { src: 'img/20250808_154459.jpg', title: 'Uhu' },
     { src: 'img/20250808_155226.jpg', title: 'Uhu' },
     { src: 'img/20250903_102839.jpg', title: 'Schlange' },
-    { src: 'img/20250915_192143.jpg', title: 'Sonnenuntergang mit Gewitterwolken' },
     { src: 'img/20251008_062934.jpg', title: 'Mond mit Wolken' },
-    { src: 'img/20251123_141955.jpg', title: 'Eiszauber Winter' },
-    { src: 'img/dji_fly_20250611_200820_119_1749665349323_photo_optimized.jpg', title: 'Luftaufnahme Meer und Strand' },
-    { src: 'img/dji_fly_20250613_193544_151_1749836154678_photo_optimized.jpg', title: 'Luftaufnahme Strand' },
-    { src: 'img/dji_fly_20250613_193906_159_1749836358344_photo_optimized.jpg', title: 'Luftaufnahme Meer' },
     { src: 'img/DSC00154.jpg', title: 'Kanal in Venedig' }
 ];
 
@@ -23,8 +18,8 @@ const dialogCounter = document.getElementById("dialogCounter");
 
 
 function openDialog(i) {
-    clearDialog(); 
-    Index = i - 1; // weil dein erstes Bild 1 ist
+    clearDialog();
+    Index = i - 1;
     updateDialog();
     dialog.showModal();
 }
@@ -45,19 +40,19 @@ function updateDialog() {
     dialogCounter.textContent = `${Index + 1}/${images.length}`;
 }
 
-function go_right() {
+function goRight() {
     Index++;
     if (Index >= images.length) {
-        Index = 0; // wieder zum Anfang
+        Index = 0;
     }
 
     updateDialog();
 }
 
-function go_left() {
+function goLeft() {
     Index--;
     if (Index < 0) {
-        Index = images.length - 1; // zum letzten Bild
+        Index = images.length - 1;
     }
     updateDialog();
 }
@@ -79,7 +74,7 @@ document.onkeydown = function (event) {
         go_right();
     } else if (event.key === "ArrowLeft") {
         go_left();
-    } else if (event.key === "Escape"){
+    } else if (event.key === "Escape") {
         closeDialog();
     }
 }
